@@ -6,7 +6,6 @@ from todo import views as todo_views  # Используем alias для todo.v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', todo_views.home, name='home'),
     path('', todo_views.index, name='index'),# Изменено на todo_views
     path('blog/', include('blog.urls')),
     path('signup/', todo_views.signupuser, name='signupuser'),
