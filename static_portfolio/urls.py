@@ -6,7 +6,7 @@ from portfolio import views
 from todo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', views.index, name='index'),
     path('blog/', include('blog.urls')),
     path('signup/', views.signupuser, name='signupuser'),
     path('login/', views.loginuser, name='loginuser'),
