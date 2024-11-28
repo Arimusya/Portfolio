@@ -8,8 +8,8 @@ from .models import Todo
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 
-def home(request):
-    return render(request, 'todo/home.html')
+def index(request):
+    return render(request, 'todo/index.html')
 
 def signupuser(request):
     if request.method == 'GET':
@@ -41,7 +41,7 @@ def loginuser(request):
 def logoutuser(request):
     if request.method == 'POST':
         logout(request)
-        return redirect('home')
+        return redirect('index')
 
 @login_required
 def createtodo(request):
